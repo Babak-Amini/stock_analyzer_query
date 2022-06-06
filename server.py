@@ -10,6 +10,7 @@ CORS(app, support_credentials=True)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/')
+@cross_origin()
 def home():
     return 'OK'
 
@@ -30,6 +31,7 @@ def getSpy():
     return jsonify(sp_dict)
 
 @app.route('/getStock')
+@cross_origin()
 def getStocks():
     # input = request.args.get('input')
     # global df
