@@ -4,7 +4,6 @@ from flask_cors import CORS, cross_origin
 import pandas as pd
 from bs4 import BeautifulSoup as bs
 import requests
-import json
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
