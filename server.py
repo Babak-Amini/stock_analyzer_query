@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup as bs
 import requests
 
 app = Flask(__name__)
-CORS(app, support_credentials=True)
 app.config['CORS_HEADERS'] = 'Content-Type'
+CORS(app, support_credentials=True)
 
 @app.route('/')
 @cross_origin()
